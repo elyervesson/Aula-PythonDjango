@@ -11,6 +11,10 @@ FOUND = 0
 NOT_FOUND = 1
 ERROR = 2
 
+# Criação de uma excessão
+class MinhaException(Exception): 
+	pass
+	
 def searchString(search, filename):
 	f = open(filename) #Abre o arquivo
 	for line in f:
@@ -19,15 +23,24 @@ def searchString(search, filename):
 	f.close()
 
 def main(args):
-	search = args[1]
+	try:
+		search = args[1]
+	except IndexError:
+		print >>sys.stderr, "Usage: grep [OPTION]... PATTERN [FILE]..."
+		return ERROR
+		
 	filenames = args[2:]
 
 	retorno = NOT_FOUND
 	for filename in filenames:
-		for line in searchString(search, filename):
-			print "%s: %s" % (filename, line)
-			retorno = FOUND
-	
+		try:
+			for line in searchString(search, filename):
+				print "%s: %s" % (filename, line)
+				retorno = FOUND
+		except IOError, ex:
+			print >>sys.stderr, "grep.py: %s: %s" % (ex.filename, ex.strerror)
+			retorno = ERROR
+			
 	return retorno
 		
 args = sys.argv
