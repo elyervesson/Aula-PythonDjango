@@ -1,0 +1,21 @@
+virtualenv aula --no-site-packages
+
+source bin/activate
+
+easy_install django
+
+django-admin.py startproject <Nome do Projeto>//Cria um novo projeto django
+
+manage.py //Faz uma listagem de quais comandos é possivel usar
+
+./manage.py runserver //Executa o servidor
+
+./manage.py startapp <Nome da Aplicação> //Cria uma nova aplicação
+
+urls.py //Arquivo que armazena as URLS da aplicação
+
+models.py //Arquivo que armazena os modelos que estão presentes em tabelas no BD
+
+sqlite3 /tmp/<Nome do Banco.db> //acessa o banco de Dados
+
+.table //Mostra todas as tabelas do banco de dados
