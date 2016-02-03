@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'agenda',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -84,7 +85,7 @@ WSGI_APPLICATION = 'gerenciador.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', #Banco de dados ideal para desenvolvimento
-        'NAME': '/tmp/gerenciador.db',
+        'NAME': '/home/treinamento-asus/aula/gerenciador/gerenciador.db',
     #Como estamos usando o sqlite3 valores como 'USER', 'PASSWORD', 'HOST' e 'PORT' nao precisao ser preenchidos 
     }
 }

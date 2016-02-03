@@ -12,6 +12,10 @@ manage.py //Faz uma listagem de quais comandos é possivel usar
 
 ./manage.py startapp <Nome da Aplicação> //Cria uma nova aplicação
 
+./manage.py makemigrations <Nome da Aplicação> //Criar as tabelas no bd
+./manage.py sqlmigrate <Nome da Aplicação> 0001 //Criar as tabelas no bd
+./manage.py migrate //Criar as tabelas no bd
+
 urls.py //Arquivo que armazena as URLS da aplicação
 
 models.py //Arquivo que armazena os modelos que estão presentes em tabelas no BD
@@ -19,3 +23,7 @@ models.py //Arquivo que armazena os modelos que estão presentes em tabelas no B
 sqlite3 /tmp/<Nome do Banco.db> //acessa o banco de Dados
 
 .table //Mostra todas as tabelas do banco de dados
+
+.schema <Nome do Schema>
+
+parei 34 mim

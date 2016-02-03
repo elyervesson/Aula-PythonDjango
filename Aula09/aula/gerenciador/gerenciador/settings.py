@@ -27,7 +27,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Elyervesson de Souza Pereira', 'elyervesson@gmail.com')
+    ('Elyervesson de Souza Pereira', 'elyervesson@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'gerenciador.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', #Banco de dados ideal para desenvolvimento
-        'NAME': '/tmp/gerenciador.db',
+        'NAME': '/home/treinamento-asus/aula/gerenciador/gerenciador.db',
     #Como estamos usando o sqlite3 valores como 'USER', 'PASSWORD', 'HOST' e 'PORT' nao precisao ser preenchidos 
     }
 }
